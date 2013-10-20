@@ -5,8 +5,6 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-POWERLINE_HIDE_HOST_NAME="true"
-ZSH_THEME="powerline"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -45,8 +43,13 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+export TERM=xterm-256color
+
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:~/.dotfiles/bin:$PATH
+export PATH=/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:~/.dotfiles/bin:$PATH
+
+# Powerline
+. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # alias vi and vim to macvim
 alias vi="mvim -v"
