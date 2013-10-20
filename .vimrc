@@ -31,7 +31,9 @@ set background=light
 colorscheme solarized
 
 " Vim powerline 
-set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
 set laststatus=2
 
 " vim backup location
