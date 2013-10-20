@@ -1,3 +1,7 @@
+" Pathogen 
+execute pathogen#infect()
+syntax on
+
 " dont be compatible with vi
 set nocompatible
 
@@ -11,14 +15,11 @@ set wildmode=full
 
 " make vim remeber last position
 if has("autocmd")
+  filetype plugin indent on
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
             \| exe "normal g'\"" | endif
 endif
 
-" Pathogen 
-execute pathogen#infect()
-syntax on
-filetype plugin indent on
 
 " show and highlight line numbers
 set nu
@@ -57,13 +58,6 @@ nnoremap <leader>u :GundoToggle<CR>
 let g:gundo_width = 45
 let g:gundo_preview_height = 40
 let g:gundo_right = 1
-
-" pyclewn
-let g:pyclewn_args="--window=bottom"
-nnoremap <leader>sd :Pyclewn pdb<CR>
-nnoremap <leader>ed :Cquit<CR>
-nnoremap <leader>mk :Cmapkeys<CR>
-nnoremap <leader>uk :Cmapkeys<CR>
 
 " jedi-vim, jedi is a code helper for python
 let g:jedi#use_tabs_not_buffers=0
