@@ -25,10 +25,10 @@ endif
 set nu
 
 " solarzied
-let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 set background=light
 colorscheme solarized
+call togglebg#map("<F5>")
 
 " Vim powerline 
 python from powerline.vim import setup as powerline_setup
@@ -63,3 +63,9 @@ let g:gundo_right = 1
 
 " jedi-vim, jedi is a code helper for python
 let g:jedi#use_tabs_not_buffers=0
+
+" slimv
+let g:slimv_menu=1
+let g:slimv_package=1
+let g:slimv_repl_split=2
+let g:paredit_mode=0
