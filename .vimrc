@@ -61,11 +61,24 @@ let g:gundo_width = 45
 let g:gundo_preview_height = 40
 let g:gundo_right = 1
 
-" jedi-vim, jedi is a code helper for python
-let g:jedi#use_tabs_not_buffers=0
-
 " slimv
 let g:slimv_menu=1
 let g:slimv_package=1
 let g:slimv_repl_split=2
 let g:paredit_mode=0
+
+" messages
+set cmdheight=2
+
+" YouCompleteMe
+let g:ycm_filetype_blacklist = {
+      \ 'tagbar' : 1,
+      \ 'qf' : 1,
+      \ 'notes' : 1,
+      \ 'markdown' : 1,
+      \ 'unite' : 1,
+      \ 'text' : 1,
+      \ 'vimwiki' : 1,
+      \ 'lisp' : 1,
+      \}
+let g:ycm_autoclose_preview_window_after_completion = 1 
