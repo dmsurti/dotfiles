@@ -82,3 +82,6 @@ let g:ycm_filetype_blacklist = {
       \ 'lisp' : 1,
       \}
 let g:ycm_autoclose_preview_window_after_completion = 1 
+
+" Syntastic
+let g:syntastic_python_checkers=['flake8']
