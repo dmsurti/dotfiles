@@ -87,6 +87,6 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:syntastic_python_checkers=['flake8']
 
 " Ultisnips
-let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsExpandTrigger="<c-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
