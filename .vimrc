@@ -26,6 +26,7 @@ set nu
 
 " solarzied
 let g:solarized_termtrans=1
+let g:solarized_termcolors=256
 set background=light
 colorscheme solarized
 
