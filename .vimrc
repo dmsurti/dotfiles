@@ -35,6 +35,7 @@ python from powerline.vim import setup as powerline_setup
 python powerline_setup()
 python del powerline_setup
 set laststatus=2
+set encoding=utf-8
 
 " vim backup location
 set backupdir=~/tmp/vim-backup
