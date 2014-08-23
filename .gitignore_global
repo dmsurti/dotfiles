@@ -2,3 +2,17 @@
 .DS_Store
 *.swp
 *.swo
+.temp.txt.swp
+sounds.zip
+strokes.csv
+umpire-med.obj.orig
+
+#Xcode
+*.xccheckout
+*.xcuserstate
+project.xcworkspace/
+xcuserdata/
+
+#Blender
+*.blend1
+*.blend2
