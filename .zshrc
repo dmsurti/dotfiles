@@ -46,7 +46,7 @@ source $ZSH/oh-my-zsh.sh
 export TERM=xterm-256color
 
 # Customize to your needs...
-export PATH=/usr/local/share/python:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:~/.dotfiles/bin:$PATH
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:~/.dotfiles/bin:$PATH
 
 # Powerline
 . /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
@@ -64,3 +64,5 @@ bindkey '^R' history-incremental-search-backward
 bindkey '^S' history-incremental-search-forward
 bindkey '^P' history-search-backward
 bindkey '^N' history-search-forward
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
