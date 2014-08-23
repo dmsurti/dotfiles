@@ -7,4 +7,16 @@
 (package-initialize)
 
 ;;; enable evil mode
+(require 'evil)
 (evil-mode 1)
+
+;;; setup load path, autoloads and the lisp systems
+(add-to-list 'load-path "~/repos/github/slime")
+(require 'slime-autoloads)
+
+;;; setup lisp system and slime contribs
+(setq inferior-lisp-program "~/lw-images/lw61-console")
+(setq slime-contribs '(slime-fancy))
+
+;;; slime selector
+(global-set-key "\C-cs" 'slime-selector)
