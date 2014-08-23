@@ -55,8 +55,8 @@ let g:CommandTMaxHeight=10
 
 " gundo
 nnoremap <leader>u :GundoToggle<CR>
-let g:gundo_width = 45
-let g:gundo_preview_height = 40
+let g:gundo_width = 25
+let g:gundo_preview_height = 30
 let g:gundo_right = 1
 
 " messages
