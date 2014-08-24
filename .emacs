@@ -10,6 +10,9 @@
 (require 'evil)
 (evil-mode 1)
 
+;;; install solarized
+(load-theme 'solarized-light t)
+
 ;;; setup load path, autoloads and the lisp systems
 (add-to-list 'load-path "~/repos/github/slime")
 (require 'slime-autoloads)
