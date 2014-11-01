@@ -13,6 +13,9 @@
 ;;; install solarized
 (load-theme 'solarized-light t)
 
+;;; add quicklisp slime helper
+(load (expand-file-name "~/quicklisp/slime-helper.el"))
+
 ;;; setup load path, autoloads and the lisp systems
 (add-to-list 'load-path "~/repos/github/slime")
 (require 'slime-autoloads)
