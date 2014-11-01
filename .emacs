@@ -13,15 +13,12 @@
 ;;; install solarized
 (load-theme 'solarized-light t)
 
-;;; add quicklisp slime helper
+;;; set up quicklisp slime helper, slime contribs and various lisps
 (load (expand-file-name "~/quicklisp/slime-helper.el"))
-
-;;; setup load path, autoloads and the lisp systems
-(add-to-list 'load-path "~/repos/github/slime")
+(setq slime-lisp-implementations
+      '((lispworks ("~/lw-images/lw61-console"))
+        (sbcl ("/usr/local/bin/sbcl"))))
 (require 'slime-autoloads)
-
-;;; setup lisp system and slime contribs
-(setq inferior-lisp-program "~/lw-images/lw61-console")
 (setq slime-contribs '(slime-fancy))
 
 ;;; slime selector
