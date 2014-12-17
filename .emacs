@@ -23,3 +23,11 @@
 
 ;;; slime selector
 (global-set-key "\C-cs" 'slime-selector)
+
+;;; neotree
+(require 'neotree)
+(global-set-key [f6] 'neotree-toggle)
+
+;;; helm equivalent of command-t
+(require 'helm-config)
+(helm-mode 1)
