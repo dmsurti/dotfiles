@@ -38,7 +38,7 @@ set laststatus=2
 set encoding=utf-8
 
 " vim backup location
-set backupdir=/tmp/vim-backup
+set backupdir=~/tmp/vim-backup
 
 " always convert tabs into spaces
 set tabstop=8
@@ -61,3 +61,6 @@ let g:gundo_right = 1
 
 " messages
 set cmdheight=2
+
+" auto refresh file from disk when changed, works only in GUI version
+set autoread
