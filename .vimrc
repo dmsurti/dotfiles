@@ -38,7 +38,7 @@ set laststatus=2
 set encoding=utf-8
 
 " vim backup location
-set backupdir=~/tmp/vim-backup
+set backupdir=/tmp/vim-backup
 
 " always convert tabs into spaces
 set tabstop=8

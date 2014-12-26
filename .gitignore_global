@@ -16,3 +16,6 @@ xcuserdata/
 #Blender
 *.blend1
 *.blend2
+
+#Pycharm
+.idea/
