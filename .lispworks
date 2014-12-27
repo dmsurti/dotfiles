@@ -4,3 +4,6 @@
 (let ((quicklisp-init (merge-pathnames "quicklisp/setup.lisp" (user-homedir-pathname))))
   (when (probe-file quicklisp-init)
     (load quicklisp-init)))
+
+;;; Do not store backup files, as I use vim for editing
+(setf (editor:variable-value 'editor:backups-wanted) nil)
