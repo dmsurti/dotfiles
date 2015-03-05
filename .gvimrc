@@ -1,5 +1,5 @@
-" set font
-set guifont=Inconsolata\ for\ Powerline:h19
-
 " GUI options
 set guioptions+=m
+
+" set font
+set guifont=Source\ Code\ Pro\ \Light\ for\ Powerline:h19
