@@ -13,6 +13,15 @@ set cc=80
 set wildmenu
 set wildmode=full
 
+" store more ex commands in history
+set history=2000
+
+" set hidden setting working with argdo
+set hidden
+
+" set mouse option to rearrange split windows with mouse
+set mouse=a
+
 " make vim remeber last position
 if has("autocmd")
   filetype plugin indent on
@@ -27,7 +36,7 @@ set nu
 " solarzied
 let g:solarized_termtrans=1
 let g:solarized_termcolors=256
-set background=light
+set background=dark
 colorscheme solarized
 
 " Vim powerline 
@@ -64,3 +73,10 @@ set cmdheight=2
 
 " auto refresh file from disk when changed, works only in GUI version
 set autoread
+
+" Tagbar
+nmap <F8> :TagbarToggle<CR>
+
+" Let & trigger &&
+nnoremap & :&&<CR>
+xnoremap & :&&<CR>
