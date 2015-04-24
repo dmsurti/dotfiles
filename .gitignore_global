@@ -19,3 +19,6 @@ xcuserdata/
 
 #Pycharm
 .idea/
+
+# Vim Exuberant Ctags
+tags
