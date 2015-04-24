@@ -1,5 +1,8 @@
 " Pathogen 
+filetype off
 execute pathogen#infect()
+execute pathogen#helptags()
+filetype plugin indent on
 syntax on
 
 " dont be compatible with vi
@@ -24,7 +27,6 @@ set mouse=a
 
 " make vim remeber last position
 if has("autocmd")
-  filetype plugin indent on
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
             \| exe "normal g'\"" | endif
 endif
@@ -80,3 +82,6 @@ nmap <F8> :TagbarToggle<CR>
 " Let & trigger &&
 nnoremap & :&&<CR>
 xnoremap & :&&<CR>
+
+" Exuberant CTags
+set tags+=./tags
