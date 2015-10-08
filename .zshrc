@@ -71,9 +71,3 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export RBENV_ROOT="$(brew --prefix rbenv)"
 export GEM_HOME="$(brew --prefix)/opt/gems"
 export GEM_PATH="$(brew --prefix)/opt/gems"
-
-# vtk env
-export VTK_BUILD=~/repos/git/vtkbuild
-export PATH=$VTK_BUILD/bin:$PATH
-export VTK_WRAPPING=$VTK_BUILD/Wrapping/Python
-export PYTHONPATH=$PYTHONPATH:$VTK_WRAPPING:$VTK_WRAPPING/vtk
