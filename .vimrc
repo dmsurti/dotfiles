@@ -38,7 +38,7 @@ set nu
 " solarzied
 let g:solarized_termtrans=1
 let g:solarized_termcolors=256
-set background=dark
+set background=light
 colorscheme solarized
 
 " Vim powerline 
@@ -59,7 +59,7 @@ set softtabstop=4
 
 " nerd tree
 nnoremap <F6> :NERDTreeToggle<CR>
-let NERDTreeIgnore=['\.pyc$']
+let NERDTreeIgnore=['\.pyc$', '\.xfasl$']
 
 " command t
 let g:CommandTMaxHeight=10
