@@ -1,9 +1,27 @@
 
 ;;; The following lines added by ql:add-to-init-file:
 #-quicklisp
-(let ((quicklisp-init (merge-pathnames "quicklisp/setup.lisp" (user-homedir-pathname))))
+(let ((quicklisp-init (merge-pathnames "quicklisp/setup.lisp" 
+                                       (user-homedir-pathname))))
   (when (probe-file quicklisp-init)
     (load quicklisp-init)))
 
 ;;; Do not store backup files, as I use vim for editing
 (setf (editor:variable-value 'editor:backups-wanted) nil)
+
+;;; Sync up with edits in gvim
+(editor:bind-key "Revert Buffer" #("Control-c" "r")) 
+(setf (editor:variable-value 'editor:revert-buffer-confirm) nil)
+
+;;; Sync up with slime settings
+(editor:bind-key "Compile Defun" #("Control-c" "Control-c") :mode "Lisp")
+(editor:bind-key "Compile and Load Buffer File" 
+                 #("Control-c" "Control-k") 
+                 :mode "Lisp")
+(editor:bind-key "Edit Callers" #("Control-c" "<") :mode "Lisp")
+(editor:bind-key "Edit Callees" #("Control-c" ">") :mode "Lisp")
+(editor:bind-key "Meta Documentation" "F5")
+(editor:bind-key "Function Documentation" "Shift-F5")
+(editor:bind-key "Show Documentation" "Ctrl-F5")
+(editor:bind-key "Macroexpand Form" #("Control-c" "Return"))
+(editor:bind-key "Walk Form" #("Control-x" "Return"))
