@@ -13,7 +13,7 @@
 (editor:bind-key "Revert Buffer" #("Control-c" "r")) 
 (setf (editor:variable-value 'editor:revert-buffer-confirm) nil)
 
-;;; Sync up with slime settings
+;;; Sync up with spacemacs/slime settings
 (editor:bind-key "Compile Defun" #("Control-c" "Control-c") :mode "Lisp")
 (editor:bind-key "Compile and Load Buffer File" 
                  #("Control-c" "Control-k") 
