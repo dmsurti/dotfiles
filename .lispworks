@@ -18,10 +18,23 @@
 (editor:bind-key "Compile and Load Buffer File" 
                  #("Control-c" "Control-k") 
                  :mode "Lisp")
-(editor:bind-key "Edit Callers" #("Control-c" "<") :mode "Lisp")
-(editor:bind-key "Edit Callees" #("Control-c" ">") :mode "Lisp")
-(editor:bind-key "Meta Documentation" "F5")
+
+;;; Tools
+(editor:bind-key "Invoke Tool" #("F6"))
+
+;;; Show documentation in browser
 (editor:bind-key "Function Documentation" "Shift-F5")
+
+;;; Show documentation in editor output tab
 (editor:bind-key "Show Documentation" "Ctrl-F5")
+
 (editor:bind-key "Macroexpand Form" #("Control-c" "Return"))
 (editor:bind-key "Walk Form" #("Control-x" "Return"))
+
+(editor:bind-key "Mark Form" "Control-Meta-Space")
+
+(editor:bind-key "Function Arglist Displayer" "Control-i" :mode "Lisp")
+(editor:bind-key "Toggle Breakpoint" #("Control-c" "b") :mode "Lisp")
+
+(editor:bind-key "Search Files" "Control-Meta-g")
+(editor:bind-key "Search System" "Control-Meta-h")
