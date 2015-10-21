@@ -20,5 +20,9 @@ xcuserdata/
 #Pycharm
 .idea/
 
-# Vim Exuberant Ctags
+# TAGS
 tags
+TAGS
+GPATH
+GRTAGS
+GTAGS
