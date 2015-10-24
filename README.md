@@ -7,6 +7,8 @@ utility ([dfm](https://github.com/justone/dfm)) to help with managing and updati
 
 ## Using this repo
 
+Refer to : `Instructions.md` for a quick start mnemonic guide!!!
+
 First, fork this repo.
 
 Then, add your dotfiles:
