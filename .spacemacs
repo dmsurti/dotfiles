@@ -28,6 +28,7 @@
             c-c++-enable-clang-support t)
      python
      common-lisp
+     latex
      (auto-completion :variables
                       auto-completion-return-key-behavior 'complete
                       auto-completion-tab-key-behavior 'cycle
@@ -156,8 +157,20 @@ before layers configuration."
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
   (setq inferior-lisp-program "~/lw-console")
+
+  ;; Ensure .h files are opened for .cxx files
   (add-to-list 'projectile-other-file-alist '("cxx" . ("h" "hxx" "ixx")))
   (add-to-list 'projectile-other-file-alist '("h" . ("c" "cpp" "cxx" "ipp" "hpp" "m" "mm")))
+
+  ;; Setting and showing the 80-character column width
+  (set-fill-column 80)
+  (auto-fill-mode t)
+
+  ;; no search highlight
+  (global-evil-search-highlight-persist nil)
+
+  ;; Sycn with my VIM setup where F6=NerdTree Toggle
+  ;; and F8=Tagbar Toggle
   (global-set-key (kbd "<f6>") 'neotree-find-project-root)
   (global-set-key (kbd "<f8>") 'list-tags-current-file)
 )
