@@ -6,7 +6,7 @@
   (when (probe-file quicklisp-init)
     (load quicklisp-init)))
 
-;;; Do not store backup files, as I use vim for editing
+;;; Do not store backup files
 (setf (editor:variable-value 'editor:backups-wanted) nil)
 
 ;;; Sync up with edits in gvim
