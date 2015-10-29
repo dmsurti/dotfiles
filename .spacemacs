@@ -36,7 +36,7 @@
                       auto-completion-private-snippets-directory nil)
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
-   dotspacemacs-excluded-packages '()
+   dotspacemacs-excluded-packages '(smartparens)
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of
    ;; the list `dotspacemacs-configuration-layers'
@@ -102,7 +102,7 @@ before layers configuration."
    dotspacemacs-enable-paste-micro-state t
    ;; Guide-key delay in seconds. The Guide-key is the popup buffer listing
    ;; the commands bound to the current keystrokes.
-   dotspacemacs-guide-key-delay 0.4
+   dotspacemacs-guide-key-delay 0.1
    ;; If non nil a progress bar is displayed when spacemacs is loading. This
    ;; may increase the boot time on some systems and emacs builds, set it to
    ;; nil ;; to boost the loading time.
@@ -158,6 +158,12 @@ before layers configuration."
 layers configuration."
   (setq inferior-lisp-program "~/lw-console")
 
+  (setq-default
+   vc-follow-symlinks t
+
+   ;; Evil
+   evil-shift-around t)
+
   ;; Ensure .h files are opened for .cxx files
   (add-to-list 'projectile-other-file-alist '("cxx" . ("h" "hxx" "ixx")))
   (add-to-list 'projectile-other-file-alist '("h" . ("c" "cpp" "cxx" "ipp" "hpp" "m" "mm")))
@@ -165,6 +171,8 @@ layers configuration."
   ;; Setting and showing the 80-character column width
   (set-fill-column 80)
   (auto-fill-mode t)
+  ;; Show 80 column marker, fci->fill-column-indicator, SPC t f
+  (fci-mode 1)
 
   ;; no search highlight
   (global-evil-search-highlight-persist nil)
@@ -177,3 +185,19 @@ layers configuration."
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(safe-local-variable-values
+   (quote
+    ((rcs-header . "$Header: /hope/lwhope1-cam/hope.0/compound/61/LISPopengl/RCS/fns.lisp,v 1.11.8.1 2011/08/24 13:27:20 davef Exp $")
+     (rcs-header . "$Header: /hope/lwhope1-cam/hope.0/compound/61/LISPopengl/RCS/pkg.lisp,v 1.14.2.1 2011/08/24 13:27:20 davef Exp $")
+     (rcs-header . "$Header: /hope/lwhope1-cam/hope.0/compound/61/LISPopengl/RCS/capi.lisp,v 1.28.2.1 2011/08/24 13:27:20 davef Exp $")))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
