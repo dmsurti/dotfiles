@@ -163,7 +163,11 @@ layers configuration."
    slime-complete-symbol*-fancy nil
    slime-complete-symbol-function 'slime-simple-complete-symbol
    ;; Evil
-   evil-shift-around t)
+   evil-shift-around t
+   ;;; Neotree
+   neo-hidden-regexp-list '("^\\." "\\.cs\\.meta$" "\\.pyc$" "~$" "^#.*#$"
+                            "\\.elc$" "\\.xfasl$")
+   )
 
   ;; Ensure .h files are opened for .cxx files
   (add-to-list 'projectile-other-file-alist '("cxx" . ("h" "hxx" "ixx")))
@@ -193,7 +197,15 @@ layers configuration."
  ;; If there is more than one, they won't work right.
  '(safe-local-variable-values
    (quote
-    ((rcs-header . "$Header: /hope/lwhope1-cam/hope.0/compound/33/LISPcapi-examples/RCS/choice:list-panel-pane-menu.lisp,v 1.4 2012/01/09 14:20:53 martin Exp $")
+    ((Package . CL-USER)
+     (Base . 10)
+     (Package . LW-ADD-ONS)
+     (Syntax . COMMON-LISP)
+     (rcs-header . "$Header: /hope/lwhope1-cam/hope.0/compound/61/LISPopengl/RCS/doc.txt,v 1.9.2.1 2011/08/24 13:27:19 davef Exp $")
+     (rcs-header . "$Header: /hope/lwhope1-cam/hope.0/compound/61/LISPopengl/RCS/defsys.lisp,v 1.17.2.1 2011/08/24 13:27:20 davef Exp $")
+     (rcs-header . "$Header: /hope/lwhope1-cam/hope.0/compound/61/LISPopengl/RCS/load.lisp,v 1.11.12.1 2011/08/24 13:27:20 davef Exp $")
+     (rcs-header . "$Header: /hope/lwhope1-cam/hope.0/compound/61/LISPopengl/RCS/constants.lisp,v 1.5.8.1 2011/08/24 13:27:19 davef Exp $")
+     (rcs-header . "$Header: /hope/lwhope1-cam/hope.0/compound/33/LISPcapi-examples/RCS/choice:list-panel-pane-menu.lisp,v 1.4 2012/01/09 14:20:53 martin Exp $")
      (rcs-header . "$Header: /hope/lwhope1-cam/hope.0/compound/33/LISPcapi-examples/RCS/choice:option-pane.lisp,v 1.7 2010/08/13 09:09:51 yeh Exp $")
      (rcs-header . "$Header: /hope/lwhope1-cam/hope.0/compound/61/LISPopengl/RCS/fns.lisp,v 1.11.8.1 2011/08/24 13:27:20 davef Exp $")
      (rcs-header . "$Header: /hope/lwhope1-cam/hope.0/compound/61/LISPopengl/RCS/pkg.lisp,v 1.14.2.1 2011/08/24 13:27:20 davef Exp $")
